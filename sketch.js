@@ -7,7 +7,7 @@ function preload()
   //load images here
   
   dogImage = loadImage("images/dogImg.png");
-  dogImage1 = loadImage("images/dogImg1.png");
+  dogImage1 = loadAnimation("images/dogImg1.png");
   
   
 
@@ -85,7 +85,7 @@ function decreaseFood(){
   if(keyWentUp(UP_ARROW)){
     
     foodStock = foodStock;
-    dog.addImage(dogImage);
+    dog.addAnimation(dogImage,"god");
     fill("yellow");
     text('Thank you 🥳🥳',10,80);
     food.x = 250;
