@@ -75,7 +75,7 @@ function decreaseFood(){
   foodRef = database.ref("Food");
   foodStock = foodStock - 1;
   foodRef.set(foodStock);
-  dog.addImage(dogImage1);
+  dog.addAnimation(dogImage1,'hop');
   food.x = 350;
   food.y = 200;
   food.scale = 0.1;
