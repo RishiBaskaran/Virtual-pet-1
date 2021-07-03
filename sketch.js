@@ -7,7 +7,7 @@ function preload()
   //load images here
   
   dogImage = loadImage("images/dogImg.png");
-  dogImage1 = loadImage("images/dogImg1.png");
+  dogImage1 = loadAnimation("images/dogImg1.png");
   
   
 
@@ -75,7 +75,7 @@ function decreaseFood(){
   foodRef = database.ref("Food");
   foodStock = foodStock - 1;
   foodRef.set(foodStock);
-  dog.addImage(dogImage1);
+  dog.addAnimation(dogImage1,'hop');
   food.x = 350;
   food.y = 200;
   food.scale = 0.1;
@@ -85,7 +85,7 @@ function decreaseFood(){
   if(keyWentUp(UP_ARROW)){
     
     foodStock = foodStock;
-    dog.addImage(dogImage);
+    dog.addAnimation(dogImage,"god");
     fill("yellow");
     text('Thank you 🥳🥳',10,80);
     food.x = 250;
